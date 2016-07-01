@@ -41,16 +41,8 @@ The system test cases below are grouped together in Test Suites corresponding to
 | --- | --- | --- | --- | --- | --- | --- |
 | Precondition: 1. Android Platform available2. GoBowl app downloaded |   |   |   |   |   |   |
 | Step 2: Expand the menu. | Customer and Manager Portal are shown. |   |   |   |   |   |
-| Step 2:  Select the Manager Portal | The gui displays the following options:
-- Add Customer
-- Edit Customer Info
-- Print Customer Card
- |   |   |   |   |   |
-| Step 3: Select the Add CustomerOption. | The gui displays the following text fields:
-- First Name
-- Last Name
-- Email
- |   |   |   |   |   |
+| Step 2:  Select the Manager Portal | The gui displays the following options:_Add Customer_, _Edit Customer Info_ and _Print Customer Card_ |   |   |   |   |   |
+| Step 3: Select the Add CustomerOption. | The gui displays the following text fields: _First Name, Last Name_ **and** _Email._ |   |   |   |   |   |
 | Step 4: Complete the text field with appropriate data. | Text fields accept the input of the customer without any issues. |   |   |   |   |   |
 | Step 5: Select the Done button. | Customer should be added and displayed on customer screen. |   |   |   |   |
  |
@@ -61,16 +53,8 @@ The system test cases below are grouped together in Test Suites corresponding to
 | --- | --- | --- | --- | --- | --- | --- |
 | Precondition: 1. Android Platform available2. GoBowl app downloaded |   |   |   |   |   |   |
 | Step 2: Expand the menu. | Customer and Manager Portal are shown. |   |   |   |   |   |
-| Step 2:  Select the Manager Portal | The gui displays the following options:
-- Add Customer
-- Edit Customer Info
-- Print Customer Card
- |   |   |   |   |   |
-| Step 3: Select the Add CustomerOption. | The gui displays the following text fields:
-- First Name
-- Last Name
-- Email
- |   |   |   |   |   |
+| Step 2:  Select the Manager Portal | The gui displays the following options:_Add Customer_, _Edit Customer Info_ and _Print Customer Card._ |   |   |   |   |   |
+| Step 3: Select the Add CustomerOption. | The gui displays the following text fields:_First Name, Last Name_ **and** _Email._ |   |   |   |   |   |
 | Step 4: Add the First and Last name of the customer. | Text fields accept the input of the customer without any issues. |   |   |   |   |   |
 | Step 5: Add an email address without the &quot;@&quot; character and select the &quot;Done&quot; button. | The software should notify the customer that the systems needs a proper email address. |   |   |   |   |   |
 
@@ -80,16 +64,8 @@ The system test cases below are grouped together in Test Suites corresponding to
 | --- | --- | --- | --- | --- | --- | --- |
 | Precondition: 1. Android Platform available2. GoBowl app downloaded |   |   |   |   |   |   |
 | Step 2: Expand the menu. | Customer and Manager Portal are shown. |   |   |   |   |   |
-| Step 2:  Select the Manager Portal | The gui displays the following options:
-- Add Customer
-- Edit Customer Info
-- Print Customer Card
- |   |   |   |   |   |
-| Step 3: Select the Add CustomerOption. | The gui displays the following text fields:
-- First Name
-- Last Name
-- Email
- |   |   |   |   |   |
+| Step 2:  Select the Manager Portal | The gui displays the following options:_Add Customer_, _Edit Customer Info_ and _Print Customer Card_ |   |   |   |   |   |
+| Step 3: Select the Add CustomerOption. | The gui displays the following text fields:_First Name, Last Name_ **and** _Email._ |   |   |   |   |   |
 | Step 4: Complete just two of the text fields with appropriate data. | Text fields accept the input of the customer without any issues. |   |   |   |   |   |
 | Step 5: Select the &quot;Done&quot; button. | The software should notify the user that it needs all the text fields to be completed. |   |   |   |   |   |
 
@@ -100,17 +76,9 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
 | --- | --- | --- | --- | --- | --- | --- |
 | Precondition: 1. Android Platform available2. GoBowl app downloaded |   |   |   |   |   |   |
-| Step 2:  Select the Manager Portal | The gui displays the following options:
-- Add Customer
-- Edit Customer Info
-- Print Customer Card
- |   |   |   |   |   |
-| Step 3: Select the Edit Customer Info Option | The gui displays the following text fields:
-- First Name
-- Last Name
-- Email
- |   |   |   |   |   |
-| Step 4: Edit the Customer information | The customer is able to erase and update customer information.. |   |   |   |   |   |
+| Step 2:  Select the Manager Portal | The gui displays the following options: _Add Customer_, _Edit Customer Info_ and _Print Customer Card_ |   |   |   |   |   |
+| Step 3: Select the Edit Customer Info Option | The gui displays the following text fields:_First Name, Last Name_ **and** _Email._ |   |   |   |   |   |
+| Step 4: Edit the Customer information | The customer is able to erase and update customer information. |   |   |   |   |   |
 | Step 5: Select the Done button. | Customer information should be updated. |   |   |   |   |   |
 
 - _Test Case#2: Software checks for blank test fields_
@@ -119,16 +87,8 @@ The system test cases below are grouped together in Test Suites corresponding to
 | --- | --- | --- | --- | --- | --- | --- |
 | Precondition: 1. Android Platform available2. GoBowl app downloaded |   |   |   |   |   |   |
 | Step 2: Expand the menu. | Customer and Manager Portal are shown. |   |   |   |   |   |
-| Step 2:  Select the Manager Portal | The gui displays the following options:
-- Add Customer
-- Edit Customer Info
-- Print Customer Card
- |   |   |   |   |   |
-| Step 3: Select the Edit CustomerOption. | The gui displays the following text fields:
-- First Name
-- Last Name
-- Email
- |   |   |   |   |   |
+| Step 2:  Select the Manager Portal | The gui displays the following options: _Add Customer_, _Edit Customer Info_ and _Print Customer Card_ |   |   |   |   |   |
+| Step 3: Select the Edit CustomerOption. | The gui displays the following text fields:_First Name, Last Name_ **and** _Email._ |   |   |   |   |   |
 | Step 4: Erase one of the text fields from the Customer information. | The user is able to delete text on any text field. |   |   |   |   |   |
 | Step 5: Select the &quot;Done&quot; button. | The software should notify the user that it needs all the text fields to be completed. |   |   |   |   |   |
 
@@ -139,11 +99,7 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
 | --- | --- | --- | --- | --- | --- | --- |
 | Precondition: 1. Android Platform available2. GoBowl app downloaded |   |   |   |   |   |   |
-| Step 2:  Select the Manager Portal | The gui displays the following options:
-- Add Customer
-- Edit Customer Info
-- Print Customer Card
- |   |   |   |   |   |
+| Step 2:  Select the Manager Portal | The gui displays the following options:_Add Customer_, _Edit Customer Info_ and _Print Customer Card_ |   |   |   |   |   |
 | Step 3: Select the &quot;Edit the Customer Info&quot; Option | The screen should display the customer&#39;s information. |   |   |   |   |   |
 | Step 5: Select the &quot;More&quot; option icon. | The screen should display a &quot;Print Customer Card&quot; option. |   |   |   |   |   |
 | Step 4: Select the &quot;Print Customer Card&quot; button. | Customer card should be printed with QR code. |   |   |   |   |   |
