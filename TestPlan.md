@@ -92,7 +92,7 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Precondition: 1. Android Platform available 2. GoBowl app downloaded |   |   |   |   |   |   |
 | Step 1:  Select the Manager Portal | The GUI displays a list of current available customers | the app displays all the available customers|  Pass | 1  |   |   |
 | Step 2: Select one of the customers| The GUI displays the following text fields: _First Name_, _Last Name_ and  _Email._ | The text fields are shown |  Pass | 3  |   | |
-| Step 3: Select the Print Customer Card button | Customer card should be printed with QR code. |  The app states that the card is printed |   Pass| 4  |   |   |  App crashed after selecting printing several times followed by going to the previous page( intermintent issue) |
+| Step 3: Select the Print Customer Card button | Customer card should be printed with QR code. |  The app states that the card is printed |   Pass| 4  |   |   |  |
 
 - _Test Case #2: Print a Customer Card from the Add Customer Screen (Integration Testing)_
 
@@ -122,7 +122,7 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
 | --- | --- | --- | --- | --- | --- | --- |
 | Precondition: 1. Completed Test Case #1 2. Have 3 customer IDs |   |   |   |   |   |   |
-| Step 2: Select the number of players and press continue| The app asks the user to scan the other player's card Ids |  The expected notification is shown | Pass  |   6|   |   |
+| Step 2: Select two additional players and press continue| The app asks the user to scan the other player's card Ids |  The expected notification is shown | Pass  |   6|   |   |
 | Step 3: Place customer card under the camera | The system will scan the QR code and display the corresponding customer&#39;s name. |The app displays the user's name and emails |  Pass |6  |  |Simulated test as we don't have the needed camera |
 | Step 4: Press the Continue button | The system displays the assigned lane and players | The expected text is shown  | Pass |  6 |   |   |
 | Step 5:  Press _Done_ after all players are displayed | The app should go back to the main page| The app show the home page | Pass  |   6|   |   |   |
@@ -138,7 +138,7 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Step 5: Select a player | The app should display a controller that the user can easily scroll to find and set their scores. |  The expected controller is shown |Pass   | 7  |   |   |
 | Step 6: Enter scores for the 3 players and press Continue | System should display the bill |  The expected outcome is met | Pass  |  7 |   |   |   |
 
-- _Test Case #4: Selecting the a random lane at checkout_
+- _Test Case #4: Selecting a random lane at checkout_
 
 | Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -146,6 +146,22 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Step 2:  Select Checkout on the main page | The system will ask the customer to confirm the lane that was assigned. | The sytem prompts the user for the lane the number  |  Pass | 7  |   |   |
 | Step 3: Enter a random lane number | The app notify the user that the rental is not available | The user is notified when a lane rental is not avialable | Pass  |  7 |   |   |
 
+- _Test Case #5: Selecting more than two additional players_
+- 
+| Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
+| --- | --- | --- | --- | --- | --- | --- |
+| Precondition: 1. Completed Test Case #1 2. Have 3 customer IDs |   |   |   |   |   |   |
+| Step 2: Select Four additional players and press continue| The app asks the user to scan the other player's card Ids |  The app creates an | Fail  |   6|   |   Bug#2 This failure was expected because there were only 3 test users created for our utility classes. Therefore as shown on the resolution table at the end of the test plan we considered this bug invalid|
+
+
+- _Test Case #5: Selecting zero additional players_
+- 
+| Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
+| --- | --- | --- | --- | --- | --- | --- |
+| Precondition: 1. Completed Test Case #1 2. Have 3 customer IDs |   |   |   |   |   |   |
+| Step 2: Select Zero additional players| The app allow the user to enter the number of additional players without any issues | The expected outcome was occured | Pass  |   6|   |  |
+| Step 3: Press the Continue button | The system displays the assigned lane and the sole player | The expected text is shown  | Pass|  6 |   |   |
+| Step 5:  Press _Done_  | The app should go back to the main page| The app show the home page | Pass |   6|   |   |   |
 **Test Suite #5: Billing**
 
 - _Test Case #1: System notifies the user if the credit card scanner throws an error (Integration Testing)_
@@ -162,5 +178,77 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Step 7: Press the _Confirm Split_ button| System should ask the players to swipe their credit cards. | The app prompts the user to swipe their cards| Pass  | 7  |   |   |   |
 | Step 8: Swipe the credit cards| System should displaye if the charge was succefully for each swiped card| The app displays the last four digits of the credit cards and notifies the user if the charge was successful| Pass  | 7,9  |   |   |   |
 
+- _Test Case #2: Splitting the bill more times than there are active players (Integration Testing)_
+
+| Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
+| --- | --- | --- | --- | --- | --- | --- |
+| Precondition: 1. Completed Test Case #1 and #2 from Suite #4  successfully |   |   |   |   |   |   |
+| Step 2:  Select Checkout on the main page | The system will ask the customer to confirm the lane that was assigned. | The sytem prompts the user for the lane the number  |  Pass |   |   |   |
+| Step 3: Enter the assigned lane number | The app should allow the user to enter a proper value on the corresponding text field | The user is able to enter the lane number without any issues  | Pass  |7   |   |   |
+| Step 3: Select the Continue button | The system prompts the user to enter the scores of each player. | The app prompt the user for each player's score  | Pass  |   |   |   |
+| Step 4: Select a player | The app should display a controller that the user can easily scroll to find and set their scores. |  The expected controller is shown |Pass   |   |   |   |
+| Step 5: Enter scores for the 3 players and press Continue | System should display the bill |  The expected outcome is met | Pass  | 7,8  |   |   |   |
+| Step 6: Enter Five as the number of players that will be billed| System should display the total bill divided by Five . | The app splits the bill accuretaly| Pass  |  7 |   |   |   |
+
+
+- _Test Case #3: Sunday rate test(Integration Testing)_
+
+| Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
+| --- | --- | --- | --- | --- | --- | --- |
+| Precondition: 1. Change your device settings so that the date for testing falls ona Sunday 2. Completed Test Case #1 and #2 from Suite #4 successfully  |   |   |   |   |   |   |
+| Step 2:  Select Checkout on the main page | The system will ask the customer to confirm the lane that was assigned. | The sytem prompts the user for the lane the number  |  Pass |   |   |   |
+| Step 3: Enter the assigned lane number | The app should allow the user to enter a proper value on the corresponding text field | The user is able to enter the lane number without any issues  | Pass  |7   |   |   |
+| Step 3: Select the Continue button | The system prompts the user to enter the scores of each player. | The app prompt the user for each player's score  | Pass  |   |   |   |
+| Step 4: Select a player | The app should display a controller that the user can easily scroll to find and set their scores. |  The expected controller is shown |Pass   |   |   |   |
+| Step 5: Enter scores for the 3 players and press Continue | System should display the bill |  The expected outcome is met | Pass  | 7,8  |   |   |   |
+| Step 6: Check that the bill for the lane is $30| System should display the bill as $30. | The app displays the right amount for Sunday | Pass  |  7 |   |   |   |
+
+- _Test Case #4: Wednesday rate test(Integration Testing)_
+
+| Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
+| --- | --- | --- | --- | --- | --- | --- |
+| Precondition: 1. Change your device settings so that the date for testing falls on Wednesday 2. Completed Test Case #1 and #2 from Suite #4 successfully  |   |   |   |   |   |   |
+| Step 2:  Select Checkout on the main page | The system will ask the customer to confirm the lane that was assigned. | The sytem prompts the user for the lane the number  |  Pass |   |   |   |
+| Step 3: Enter the assigned lane number | The app should allow the user to enter a proper value on the corresponding text field | The user is able to enter the lane number without any issues  | Pass  |7   |   |   |
+| Step 3: Select the Continue button | The system prompts the user to enter the scores of each player. | The app prompt the user for each player's score  | Pass  |   |   |   |
+| Step 4: Select a player | The app should display a controller that the user can easily scroll to find and set their scores. |  The expected controller is shown |Pass   |   |   |   |
+| Step 5: Enter scores for the 3 players and press Continue | System should display the bill |  The expected outcome is met | Pass  | 7,8  |   |   |   |
+| Step 6: Check that the bill for the lane is $10| System should display the bill as $10. | The app displays the right amount for Sunday | Pass  |  7 |   |   |   |
+
+- _Test Case #5: M,T,TH,F from 9AM to 5PM rate test(Integration Testing)_
+
+| Test Case Seps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
+| --- | --- | --- | --- | --- | --- | --- |
+| Precondition: 1. Change your device settings so that the date for testing falls on Monday at 10AM  2. Completed Test Case #1 and #2 from Suite #4 successfully  |   |   |   |   |   |   |
+| Step 2:  Select Checkout on the main page | The system will ask the customer to confirm the lane that was assigned. | The sytem prompts the user for the lane the number  |  Pass |   |   |   |
+| Step 3: Enter the assigned lane number | The app should allow the user to enter a proper value on the corresponding text field | The user is able to enter the lane number without any issues  | Pass  |7   |   |   |
+| Step 3: Select the Continue button | The system prompts the user to enter the scores of each player. | The app prompt the user for each player's score  | Pass  |   |   |   |
+| Step 4: Select a player | The app should display a controller that the user can easily scroll to find and set their scores. |  The expected controller is shown |Pass   |   |   |   |
+| Step 5: Enter scores for the 3 players and press Continue | System should display the bill |  The expected outcome is met | Pass  | 7,8  |   |   |   |
+| Step 6: Check that the bill for the lane is $20| System should display the bill as $20. | The app displays the right amount for Sunday | Pass  |  7 |   |   |   |
+
+- _Test Case #6: M,T,TH,F from 5PM to 12AM rate test(Integration Testing)_
+
+| Test Case Seps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
+| --- | --- | --- | --- | --- | --- | --- |
+| Precondition: 1. Change your device settings so that the date for testing falls on Friday at 9PM  2. Completed Test Case #1 and #2 from Suite #4 successfully  |   |   |   |   |   |   |
+| Step 2:  Select Checkout on the main page | The system will ask the customer to confirm the lane that was assigned. | The sytem prompts the user for the lane the number  |  Pass |   |   |   |
+| Step 3: Enter the assigned lane number | The app should allow the user to enter a proper value on the corresponding text field | The user is able to enter the lane number without any issues  | Pass  |7   |   |   |
+| Step 3: Select the Continue button | The system prompts the user to enter the scores of each player. | The app prompt the user for each player's score  | Pass  |   |   |   |
+| Step 4: Select a player | The app should display a controller that the user can easily scroll to find and set their scores. |  The expected controller is shown |Pass   |   |   |   |
+| Step 5: Enter scores for the 3 players and press Continue | System should display the bill |  The expected outcome is met | Pass  | 7,8  |   |   |   |
+| Step 6: Check that the bill for the lane is $25| System should display the bill as $25. | The app displays the right amount for Sunday | Pass  |  7 |   |   |   |
+
+- _Test Case #7: VIP(Integration Testing)_
+
+| Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
+| --- | --- | --- | --- | --- | --- | --- |
+| Precondition: 1. Perfom a number of lane request followed by checkout until one of the test users spend more than $500 2. Completed Test Case #1 and #2 from Suite #4  successfully |   |   |   |   |   |   |
+| Step 2:  Select Checkout on the main page | The system will ask the customer to confirm the lane that was assigned. | The sytem prompts the user for the lane the number  |  Pass |   |   |   |
+| Step 3: Enter the assigned lane number | The app should allow the user to enter a proper value on the corresponding text field | The user is able to enter the lane number without any issues  | Pass  |7   |   |   |
+| Step 3: Select the Continue button | The system prompts the user to enter the scores of each player. | The app prompt the user for each player's score  | Pass  |   |   |   |
+| Step 4: Select a player | The app should display a controller that the user can easily scroll to find and set their scores. |  The expected controller is shown |Pass   |   |   |   |
+| Step 5: Enter scores for the 3 players and press Continue | System should display the bill |  The expected outcome is met | Pass  | 7,8  |   |   |   |
+| Step 6: Please verify that the VIP discount is being applied to the bill| VIP discount is shown and applied to the bill | The discount is shown and applied | Pass  |  7 |   |   |   |
 
 
