@@ -243,12 +243,16 @@ The system test cases below are grouped together in Test Suites corresponding to
 
 | Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
 | --- | --- | --- | --- | --- | --- | --- |
-| Precondition: 1. Perfom a number of lane request followed by checkout until one of the test users spend more than $500 2. Completed Test Case #1 and #2 from Suite #4  successfully |   |   |   |   |   |   |
-| Step 2:  Select Checkout on the main page | The system will ask the customer to confirm the lane that was assigned. | The sytem prompts the user for the lane the number  |  Pass |   |   |   |
-| Step 3: Enter the assigned lane number | The app should allow the user to enter a proper value on the corresponding text field | The user is able to enter the lane number without any issues  | Pass  |7   |   |   |
-| Step 3: Select the Continue button | The system prompts the user to enter the scores of each player. | The app prompt the user for each player's score  | Pass  |   |   |   |
-| Step 4: Select a player | The app should display a controller that the user can easily scroll to find and set their scores. |  The expected controller is shown |Pass   |   |   |   |
-| Step 5: Enter scores for the 3 players and press Continue | System should display the bill |  The expected outcome is met | Pass  | 7,8  |   |   |   |
-| Step 6: Please verify that the VIP discount is being applied to the bill| VIP discount is shown and applied to the bill | The discount is shown and applied | Pass  |  7 |   |   |   |
+| Precondition: 1. Perfom a number of lane requests followed by checkouts until one of the test users spend more than $500 2.Set the device or emulator to airplane mode 3.Change the date of the emulator or device to the following year from the date the test user reached $500 |   |   |   |   |   |   |
+| Step 2:  Select the request lane view (make sure the test user that has already spend more than $500 is the one that requests the lane | The system prompts the customer to scan their customer card. |  The app prompts the user to scan the card. |Pass   | 6  |   | Simulated test as we don't have the needed camera  |
+| Step 3: Press the Continue button | The system displays a text field where the customer can enter the number of players. | The app displays the expected text field  | Pass  |  6 |   |   |   |
+| Step 4: Select zero additional players and press continue| The system displays the assgined lane and the test user|  The expected notification is shown | Pass  |   6|   |   |
+| Step 5:  Press _Done_ after the test user is displayed | The app should go back to the main page| The app show the home page | Pass  |   6|   |   |   |
+| Step 6:  Select Checkout on the main page | The system will ask the customer to confirm the lane that was assigned. | The sytem prompts the user for the lane the number  |  Pass |   |   |   |
+| Step 7: Enter the assigned lane number | The app should allow the user to enter a proper value on the corresponding text field | The user is able to enter the lane number without any issues  | Pass  |7   |   |   |
+| Step 8: Select the Continue button | The system prompts the user to enter the scores for the test user. | The app prompt the user for each player's score  | Pass  |   |   |   |
+| Step 9: Select the test user| The app should display a controller that the user can easily scroll to find and set their scores. |  The expected controller is shown |Pass   |   |   |   |
+| Step 10: Enter scores for the one test user and press Continue | System should display the bill |  The expected outcome is met | Pass  | 7,8  |   |   |   |
+| Step 11: Please verify that the VIP discount is being applied to the bill (The bill should be %10 percent lower than the standard rate of the day)| VIP discount is shown and applied to the bill | The discount is shown and applied | Pass  |  12 |   |   |   |
 
 
