@@ -56,7 +56,7 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Step 3:  Select the Manager Option | The GUI displays all the current customers and a button with _+_ symbol|  The app displayes a list with all current customers and gives the user the option to edit or add a customer| Pass  | 1  |   |  |
 | Step 4: Press the _+_ button | The GUI displays the following text fields: _First Name_, _Last Name_ and _Email._ |The text fields are displayed |Pass | 1,3  |   |   |
 | Step 5: Add the First Name and Last Name of the customer| Text fields accept the input of the customer without any issues. | The Customer's data can be succesfully entered |Pass | 3  |   |   |
-| Step 6: Add an email address without the &quot;@&quot; character and then select the _Done_ button| The software should notify the user that the system needs a proper email address | The user can create a user without a proper email address|Fail| 3  | Bug#1  |   |
+| Step 6: Add an email address without the &quot;@&quot; character and then select the _Done_ button| The software should notify the user that the system needs a proper email address | The user can create a user without a proper email address|Pass| 3  |  |   |
 
 - _Test Case #3: Software checks for blank test fields_
 
@@ -67,7 +67,7 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Step 3:  Select the Manager Option | The GUI displays all the current customers and a button with _+_ symbol|  The app displayes a list with all current customers and gives the user the option to edit or add a customer| Pass  | 1  |   |  |
 | Step 4: Press the _+_ button | The GUI displays the following text fields: _First Name_, _Last Name_ and _Email._ |The text fields are displayed |Pass | 1,3  |   |   |
 | Step 5: Complete just two of the text fields with appropriate data | Text fields accept the input of the customer without any issues. |   The user is able to enter data to any two text fields|  Pass |   |   |   |
-| Step 6: Select the Done button | The software should notify the user that it needs all the text fields to be completed. |  The user is able to create a user with all the text fields left blank |  Fail | 3  | Bug#3  |   |   |
+| Step 6: Select the Done button | The software should notify the user that it needs all the text fields to be completed. |  The user is able to create a user with all the text fields left blank |  Pass | 3  |  |   |   |
 
 **Test Suite #2: Editing a Customer**
 
@@ -151,7 +151,7 @@ The system test cases below are grouped together in Test Suites corresponding to
 | Test Case Steps | Expected Results | Actual Results | (Pass/Fail) | Req # | Issue ID | Comments |
 | --- | --- | --- | --- | --- | --- | --- |
 | Precondition: 1. Completed Test Case #1 2. Have 3 customer IDs |   |   |   |   |   |   |
-| Step 2: Select Four additional players and press continue| The app asks the user to scan the other player's card Ids |  The app creates an | Fail  |   6|   |   Bug#2 This failure was expected because there were only 3 test users created for our utility classes. Therefore as shown on the resolution table at the end of the test plan we considered this bug invalid|
+| Step 2: Select Four additional players and press continue| The app asks the user to scan the other player's card Ids |  The app creates an | Fail  |   6|   |   Bug#3 This failure was expected because there were only 3 test users created for our utility classes. Therefore as shown on Github's issue tracking this bug is considered invalid.|
 
 
 - _Test Case #5: Selecting zero additional players_
