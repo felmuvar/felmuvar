@@ -11,15 +11,15 @@
 
 ### 1.1 Overall strategy
 
-Verification activities will be performed to ensure that all requirements are met for the GoBowl Android app. The verification activities that will be performed are unit testing and system testing. The main focus will be on performing acceptance testing. The team will assign two members to develop and execute the corresponding test procedures.
+Verification activities will be performed to ensure that all requirements are met for the GoBowl Android app. The verification activities that will be performed is system testing. The main focus will be on performing acceptance testing. The team will develop and execute the corresponding test procedures.
 
 ### 1.2 Test Selection
 
-Part of the verification effort will be to use unit tests. The other part of the verification effort will be to do BlackBox testing, taking into account the main features of the GoBowl Android app.
+The main part of the verification effort will be to do BlackBox testing, taking into account the main features of the GoBowl Android app and making sure we have complete coverage. 
 
 ### 1.3 Adequacy Criterion
 
-The quality of test cases will be gauged by code coverage from unit testing and successful acceptance tests.
+The quality of test cases will be gauged by successful acceptance tests.
 
 ### 1.4 Bug Tracking
 
@@ -27,7 +27,7 @@ We will be using Github’s integrated issue tracking to track bugs and enhancem
 
 ### 1.5 Technology
 
-We’re going to use the JUnit framework and GitHub’s issue tracking to perform and track the verification effort.
+We’re going to use GitHub’s issue tracking to perform and track the verification effort.
 
 ## 2 Test Cases
 
